@@ -1,3 +1,4 @@
 window.onload = function () {
-    // Stuff goes here
+    var start = new URLSearchParams(window.location.search).get("start")
+    console.log(start)
 }

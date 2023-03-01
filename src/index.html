@@ -4,6 +4,12 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css">
         <script>
+            window.onload = function () {
+                var input = document.getElementById("startNum");
+                input.focus();
+                input.select();
+            }
+
             function start() {
                 location.assign("visualiser.html?start=" + document.getElementById("startNum").value);
                 return false;
