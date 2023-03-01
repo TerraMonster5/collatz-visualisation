@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script>
+            function start() {
+                location.assign("visualiser.html?start=" + document.getElementById("startNum").value);
+                return false;
+            }
+        </script>
+        <title>Collatz Conjecture Visualiser</title>
+    </head>
+    <body>
+        <div id="inputContainer">
+            <form onsubmit="return start()">
+                <h1 style="margin-top: -5%;">Collatz Conjecture<br>Visualiser</h1>
+                <label for="startNum">Enter a starting number...</label><br>
+                <input type="number" id="startNum" required><br>
+                <input type="submit" id="button" value="Next →">
+            </form>
+        </div>
+    </body>
+</html>

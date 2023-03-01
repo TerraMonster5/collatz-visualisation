@@ -1,0 +1,42 @@
+body {
+    background-color: #4d4d55;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Bahnschrift;
+    font-weight: 600;
+}
+
+#inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    height: 30vh;
+    background-color: #dbdbdd;
+}
+
+#startNum {
+    width: 15vw;
+    padding: 6px 10px 6px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    margin: 3px;
+    margin-bottom: 6px;
+}
+
+#button {
+    background-color: #ffffff;
+    font-family: inherit;
+    font-weight: inherit;
+    color: #000000;
+    font-size: 16px;
+    border: 2px solid #4d4d55;
+    border-radius: 4px;
+}
+
+#button:hover {
+    background-color: #4d4d55;
+    color: #ffffff;
+}
