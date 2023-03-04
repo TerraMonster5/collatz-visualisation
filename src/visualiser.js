@@ -1,13 +1,16 @@
 window.onload = function () {
     const canvas = document.getElementById("graph"),
-    canvasHeight = Number(canvas.offsetHeight),
     ctx = canvas.getContext("2d"),
     start = new URLSearchParams(window.location.search).get("start");
+
     var current = Number(start),
+    canvasHeight = Number(canvas.getAttribute("height")),
     i = 10;
 
+    ctx.lineWidth = 1.5;
+
     ctx.beginPath();
-    ctx.moveTo(0, canvasHeight-(current*10));
+    ctx.moveTo(0, canvasHeight-current);
 
     console.log(current);
 
@@ -15,15 +18,25 @@ window.onload = function () {
         if (current % 2) {
             current *= 3;
             current += 1;
-        }
-        else {
+        } else {
             current = Number(current / 2);
         }
 
-        i+=10;
+        while (true) {
+            console.log(canvasHeight+" "+current);
+            if (canvasHeight-current < 0) {
+                canvas.setAttribute("height", String(canvasHeight+100));
+                canvasHeight = Number(canvas.getAttribute("height"));
+            } else {
+                break;
+            }
+        }
 
+        i+=10;
+        
         console.log(current);
-        ctx.lineTo(i, canvasHeight-(current*10));
+        console.log(canvasHeight);
+        ctx.lineTo(i, canvasHeight-current);
         ctx.stroke();
     }
 }
